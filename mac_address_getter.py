@@ -29,4 +29,4 @@ if __name__ == '__main__':
                          " (2 is demanded)")
     mac_client = MacAddressApiClient(sys.argv[1])
     mac_info = mac_client.get_mac_info(sys.argv[2])
-    print(mac_info)
+    print(mac_info + '\n')
