@@ -6,4 +6,4 @@ To be able to run mac_address_getter.py script You should:
      docker run MAC-getter-image
 
 Security issue:
-Giving key_api as plain text via command line
+1) Giving key_api as plain text via command line
