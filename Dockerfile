@@ -1,9 +1,10 @@
-FROM python:3
+FROM python:3.9-alpine
 
-COPY mac_address_getter.py /usr/src/app
-COPY requirements.txt /usr/src/app
+WORKDIR /usr/src/app
+COPY mac_address_getter.py ./
+COPY requirements.txt ./
 
-RUN pip install -r /usr/src/app/requirements.txt
+RUN pip install -r requirements.txt
 
 # please replace values for <your_key_api> and <searched_MAC_address>
-CMD [ "python", "/usr/src/app/mac_address_getter.py", "<your_key_api>", "<searched_MAC_address>" ]
+CMD [ "python", "mac_address_getter.py", "<your_key_api>", "<searched_MAC_address>" ]
